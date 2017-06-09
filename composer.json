@@ -1,72 +1,95 @@
 {
-  "name": "someline/starter-framework",
-  "type": "framework",
-  "description": "The Someline Starter Framework.",
-  "keywords": [
-    "someline",
-    "starter-framework"
-  ],
-  "homepage": "https://github.com/someline/starter-framework",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Libern Lin",
-      "email": "libernlin@gmail.com",
-      "homepage": "https://www.someline.com/",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": ">=5.6.4",
-    "ext-pdo_sqlite": "*",
-    "laravel/framework": "5.4.*",
-    "laravel/tinker": "~1.0",
-    "predis/predis": "~1.1",
-    "doctrine/dbal": "~2.3",
-    "itsgoingd/clockwork": "~1.13",
-    "guzzlehttp/guzzle": "~6.0",
-    "lukasoppermann/http-status": "^2.0",
-    "prettus/l5-repository": "^2.6",
-    "prettus/laravel-validation": "1.1.*",
-    "intervention/image": "^2.3",
-    "intervention/imagecache": "^2.3",
-    "cviebrock/image-validator": "^2.2",
-    "barryvdh/laravel-ide-helper": "^2.2",
-    "someline/rest-api-client": "1.1.*",
-    "someline/someline-image": "2.0.*",
-    "mcamara/laravel-localization": "1.2.*",
-    "laravel/passport": "^2.0",
-    "monarobase/country-list": "^2.0",
-    "libern/timezone": "^1.0",
-    "giggsey/libphonenumber-for-php": "~8.0",
-    "torann/geoip": "1.0.*"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~4.0||~5.0",
-    "scrutinizer/ocular": "~1.1",
-    "squizlabs/php_codesniffer": "~2.3"
-  },
-  "autoload": {
-    "files": [
-      "src/Someline/Foundation/helpers.php"
+    "name": "someline/starter-framework",
+    "type": "framework",
+    "description": "The Someline Starter Framework.",
+    "keywords": [
+        "someline",
+        "starter-framework"
     ],
-    "psr-4": {
-      "Someline\\": "src/Someline"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Someline\\Test\\": "tests"
-    }
-  },
-  "scripts": {
-    "test": "phpunit",
-    "format": "phpcbf --standard=psr2 src/"
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    }
-  },
-  "minimum-stability": "dev"
+    "homepage": "https://github.com/someline/starter-framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Libern Lin",
+            "email": "libernlin@gmail.com",
+            "homepage": "https://www.someline.com/",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "marsd/passport",
+                "version": "dev-master",
+                "dist": {
+                    "url": "https://codeload.github.com/marsd/passport/zip/master",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/marsd/passport",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "classmap": [
+                        ""
+                    ]
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "ext-pdo_sqlite": "*",
+        "laravel/framework": "5.4.*",
+        "laravel/tinker": "~1.0",
+        "predis/predis": "~1.1",
+        "doctrine/dbal": "~2.3",
+        "itsgoingd/clockwork": "~1.13",
+        "guzzlehttp/guzzle": "~6.0",
+        "lukasoppermann/http-status": "^2.0",
+        "prettus/l5-repository": "^2.6",
+        "prettus/laravel-validation": "1.1.*",
+        "intervention/image": "^2.3",
+        "intervention/imagecache": "^2.3",
+        "cviebrock/image-validator": "^2.2",
+        "barryvdh/laravel-ide-helper": "^2.2",
+        "someline/rest-api-client": "1.1.*",
+        "someline/someline-image": "2.0.*",
+        "mcamara/laravel-localization": "1.2.*",
+        "marsd/passport": "dev-master",
+        "monarobase/country-list": "^2.0",
+        "libern/timezone": "^1.0",
+        "giggsey/libphonenumber-for-php": "~8.0",
+        "torann/geoip": "1.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0||~5.0",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "files": [
+            "src/Someline/Foundation/helpers.php"
+        ],
+        "psr-4": {
+            "Someline\\": "src/Someline"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Someline\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "format": "phpcbf --standard=psr2 src/"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev"
 }
